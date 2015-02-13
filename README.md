@@ -9,7 +9,7 @@ Currently Uuid has 5 versions and while all of them are valid, usage of newest v
 
 ## Usage
 
-Usage is real simple, you can create your Uuid straigt away or under certain namespaces.
+Usage is real simple, you can create your Uuid right away or under certain namespaces.
 
 ### Without namespacing
 This is the most common case. Usage is straight-forward:
