@@ -1,6 +1,7 @@
-## Purpose
+#Uuid Generator
+This class' intent is to encapsulate the latest version and most secure versions removing the need to explicitly hard-code a library and the current most up-to-date Uuid version everywhere.
 
-This class' intent is to encapsulate the latest version and most secure versions removing the need to explicitly hard-coding a library and the current most up-to-date Uuid version around in it.
+## Purpose
 
 Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest preferred versions are:
 
