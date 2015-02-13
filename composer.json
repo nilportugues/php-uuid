@@ -1,0 +1,33 @@
+{
+  "require": {
+    "rhumsaa/uuid": "2.7.*",
+    "moontoast/math" : "1.1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.2"
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/nilportugues/math"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/nilportugues/uuid"
+    }
+  ],
+  "config": {
+    "bin-dir": "bin/",
+    "preferred-install": "dist"
+  },
+  "autoload": {
+    "psr-4": {
+      "NilPortugues\\": "src/NilPortugues/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\NilPortugues\\": "tests/NilPortugues/"
+    }
+  }
+}
