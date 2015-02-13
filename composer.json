@@ -1,4 +1,20 @@
 {
+  "name":"nilportugues/uuid-generator",
+  "type":"library",
+  "homepage":"http://nilportugues.com",
+  "license":"MIT",
+  "authors":
+  [
+      {
+          "name":"Nil Portugués Calderó",
+          "email":"contact@nilportugues.com",
+          "homepage":"http://nilportugues.com",
+          "role":"Lead Developer"
+      }
+  ],
+  "require":{
+      "php":">=5.4"
+  },
   "require": {
     "rhumsaa/uuid": "2.7.*",
     "moontoast/math" : "1.1.0"
@@ -29,5 +45,6 @@
     "psr-4": {
       "Tests\\NilPortugues\\": "tests/NilPortugues/"
     }
-  }
+  },
+  "minimum-stability": "stable"
 }
