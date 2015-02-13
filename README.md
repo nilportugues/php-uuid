@@ -2,7 +2,7 @@
 
 This class' intent is to encapsulate the latest version and most secure versions removing the need to explicitly hard-coding a library and the current most up-to-date Uuid version around in it.
 
-Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest versions preferred are:
+Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest preferred versions are:
 
 - Uuid4 preferred over Uuid1.
 - Uuid5 preferred over Uuid3 and Uuid1
