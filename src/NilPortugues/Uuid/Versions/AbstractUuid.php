@@ -14,7 +14,7 @@ namespace NilPortugues\Uuid\Versions;
  * Class AbstractUuid
  * @package NilPortugues\Uuid\Versions
  */
-class AbstractUuid
+abstract class AbstractUuid
 {
     const TIME_LOW                  = 'time_low';
     const TIME_MID                  = 'time_mid';
