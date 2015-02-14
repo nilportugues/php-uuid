@@ -24,23 +24,6 @@ abstract class AbstractUuid
     const NODE                      = 'node';
 
     /**
-     * The fields that make up this UUID
-     *
-     * This is initialized to the nil value.
-     *
-     * @var array
-     * @link Rhumsaa.Uuid.Uuid.html#method_getFields
-     */
-    protected $fields = [
-        self::TIME_LOW                  => '00000000',
-        self::TIME_MID                  => '0000',
-        self::TIME_HI_AND_VERSION       => '0000',
-        self::CLOCK_SEQ_HI_AND_RESERVED => '00',
-        self::CLOCK_SEQ_LOW             => '00',
-        self::NODE                      => '000000000000',
-    ];
-
-    /**
      * Returns a version 3 or 5 UUID based on the hash (md5 or sha1) of a
      * namespace identifier (which is a UUID) and a name (which is a string)
      *

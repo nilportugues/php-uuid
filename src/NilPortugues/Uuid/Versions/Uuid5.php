@@ -37,7 +37,14 @@ class Uuid5 extends AbstractUuid implements UuidInterface
      */
     public static function create($namespace = null, $name = null)
     {
-        $fields = [];
+        $fields = [
+            self::TIME_LOW                  => '00000000',
+            self::TIME_MID                  => '0000',
+            self::TIME_HI_AND_VERSION       => '0000',
+            self::CLOCK_SEQ_HI_AND_RESERVED => '00',
+            self::CLOCK_SEQ_LOW             => '00',
+            self::NODE                      => '000000000000',
+        ];
 
         if (!($namespace instanceof Uuid5)) {
             $fields = self::fromString($namespace);
