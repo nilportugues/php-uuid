@@ -29,7 +29,7 @@ class Uuid4 extends AbstractUuid implements UuidInterface
         $bytes = self::generateBytes(16);
         $hex   = bin2hex($bytes);
 
-         return self::toString(self::uuidFromHashedName($hex, 4));
+        return self::toString(self::uuidFromHashedName($hex, 4));
     }
 
     /**

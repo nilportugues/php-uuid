@@ -3,6 +3,7 @@
 namespace Tests\NilPortugues\Uuid;
 
 use NilPortugues\Uuid\Uuid;
+
 /**
  * Class UuidTest
  * @package Tests\NilPortugues\Uuid\Uuid

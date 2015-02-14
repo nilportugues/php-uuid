@@ -66,17 +66,7 @@ class Uuid5 extends AbstractUuid implements UuidInterface
      */
     private static function fromString($name)
     {
-        $nameParsed = str_replace(['urn:', 'uuid:', '{', '}', '-'], '', $name);
-        // We have stripped out the dashes and are breaking up the string using
-        // substr(). In this way, we can accept a full hex value that doesn't
-        // contain dashes.
-        $components = [
-            substr($nameParsed, 0, 8),
-            substr($nameParsed, 8, 4),
-            substr($nameParsed, 12, 4),
-            substr($nameParsed, 16, 4),
-            substr($nameParsed, 20),
-        ];
+        $components = self::calculateComponents($name);
 
         $nameParsed = implode('-', $components);
         if (!self::isValid($nameParsed)) {
@@ -91,6 +81,28 @@ class Uuid5 extends AbstractUuid implements UuidInterface
             self::CLOCK_SEQ_LOW             => sprintf('%02s', substr($components[3], 2)),
             self::NODE                      => sprintf('%012s', $components[4]),
         ];
+    }
+
+    /**
+     * We have stripped out the dashes and are breaking up the string using
+     * substr(). In this way, we can accept a full hex value that doesn't
+     * contain dashes.
+     * @param $name
+     *
+     * @return array
+     */
+    private static function calculateComponents($name)
+    {
+        $nameParsed = str_replace(['urn:', 'uuid:', '{', '}', '-'], '', $name);
+
+        $components = [
+            substr($nameParsed, 0, 8),
+            substr($nameParsed, 8, 4),
+            substr($nameParsed, 12, 4),
+            substr($nameParsed, 16, 4),
+            substr($nameParsed, 20),
+        ];
+        return $components;
     }
 
     /**

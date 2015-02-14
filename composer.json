@@ -1,36 +1,37 @@
 {
-  "name":"nilportugues/uuid",
-  "type":"library",
-  "homepage":"http://nilportugues.com",
-  "license":"MIT",
-  "authors":
-  [
-      {
-          "name":"Nil Portugués Calderó",
-          "email":"contact@nilportugues.com",
-          "homepage":"http://nilportugues.com",
-          "role":"Lead Developer"
-      }
-  ],
-  "require":{
-      "php":">=5.4"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "~4.2"
-  },
-  "config": {
-    "bin-dir": "bin/",
-    "preferred-install": "dist"
-  },
-  "autoload": {
-    "psr-4": {
-      "NilPortugues\\Uuid\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "Tests\\NilPortugues\\Uuid\\": "tests/"
-    }
-  },
-  "minimum-stability": "stable"
+    "name": "nilportugues/uuid",
+    "type": "library",
+    "homepage": "http://nilportugues.com",
+    "description" : "Library to encapsulate the latest and more secure Uuid versions",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nil Portugués Calderó",
+            "email": "contact@nilportugues.com",
+            "homepage": "http://nilportugues.com",
+            "role": "Lead Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.2",
+        "fabpot/php-cs-fixer": "dev-master"
+    },
+    "config": {
+        "bin-dir": "bin/",
+        "preferred-install": "dist"
+    },
+    "autoload": {
+        "psr-4": {
+            "NilPortugues\\Uuid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\NilPortugues\\Uuid\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable"
 }
