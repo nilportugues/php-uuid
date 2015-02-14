@@ -24,12 +24,12 @@
   },
   "autoload": {
     "psr-4": {
-      "NilPortugues\\": "src/NilPortugues/"
+      "NilPortugues\\Uuid\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\NilPortugues\\": "tests/NilPortugues/"
+      "Tests\\NilPortugues\\Uuid\\": "tests/"
     }
   },
   "minimum-stability": "stable"
