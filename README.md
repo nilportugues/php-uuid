@@ -6,7 +6,7 @@ This class' intent is to encapsulate Uuid's latest and more secure versions remo
 
 ## Installation
 
-The recommended way to install the SQL Schema Builder is through [Composer](http://getcomposer.org). Run the following command to install it:
+The recommended way to install the Uuid Generator is through [Composer](http://getcomposer.org). Run the following command to install it:
 
 ```sh
 php composer.phar require nilportugues/uuid
