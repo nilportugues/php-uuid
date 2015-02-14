@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/nilportugues/uuid.png)](https://travis-ci.org/nilportugues/uuid) [![Coverage Status](https://img.shields.io/coveralls/nilportugues/uuid.svg)](https://coveralls.io/r/nilportugues/uuid) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nilportugues/uuid/badges/quality-score.png)](https://scrutinizer-ci.com/g/nilportugues/uuid/) [![Latest Stable Version](https://poser.pugx.org/nilportugues/uuid/v/stable.svg)](https://packagist.org/packages/nilportugues/uuid) [![Total Downloads](https://poser.pugx.org/nilportugues/uuid/downloads.svg)](https://packagist.org/packages/nilportugues/uuid) [![License](https://poser.pugx.org/nilportugues/uuid/license.svg)](https://packagist.org/packages/nilportugues/uuid) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/b065a032-4ab2-4feb-a88c-d7a8423e1cf7/mini.png)](https://insight.sensiolabs.com/projects/b065a032-4ab2-4feb-a88c-d7a8423e1cf7)
+
+
 #Uuid Generator
 This class' intent is to encapsulate Uuid's latest and more secure versions removing the need to explicitly hard-code a Uuid version everywhere.
 
