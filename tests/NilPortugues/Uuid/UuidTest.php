@@ -14,7 +14,7 @@ class UuidTest extends \PHPUnit_Framework_TestCase
      */
     public function itShouldReturnAUuidWithoutUsingNamespace()
     {
-        $this->assertNotEmpty(Uuid::create());
+        $this->assertInternalType('string', Uuid::create());
     }
 
     /**
@@ -22,6 +22,18 @@ class UuidTest extends \PHPUnit_Framework_TestCase
      */
     public function itShouldReturnUuidWithNamespace()
     {
-        $this->assertNotEmpty(Uuid::create(Uuid::NAMESPACE_DNS, 'nilportugues.com'));
+        $this->assertEquals(
+            'c7b797bc-792d-5202-b0df-544f5dbd8ffc',
+            Uuid::create(Uuid::NAMESPACE_DNS, 'nilportugues.com')
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function itShouldThrowInvalidArgumentExceptionWhenNamespaceIsInvalid()
+    {
+        $this->setExpectedException('\InvalidArgumentException');
+        Uuid::create('aaa', 'nilportugues.com');
     }
 }

@@ -49,8 +49,8 @@ class Uuid implements UuidInterface
      * @var array
      */
     private static $uuidMap = [
-        self::UUID4 => '\Rhumsaa\Uuid\Uuid::uuid4',
-        self::UUID5 => '\Rhumsaa\Uuid\Uuid::uuid5',
+        self::UUID4 => '\NilPortugues\Uuid\Versions\Uuid4::create',
+        self::UUID5 => '\NilPortugues\Uuid\Versions\Uuid5::create',
     ];
 
     /**
@@ -83,14 +83,15 @@ class Uuid implements UuidInterface
     /**
      * Call a Uuid generator and returns an Uuid identifier.
      *
-     * @param  string $uuidKey
-     * @param  array $arguments
+     * @param string $uuidKey
+     * @param array  $arguments
      *
      * @return string
      */
     private static function generate($uuidKey, array $arguments)
     {
         $classAndMethod = explode('::', self::$uuidMap[$uuidKey]);
+
         return call_user_func_array($classAndMethod, $arguments);
     }
 

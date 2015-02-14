@@ -9,9 +9,9 @@ namespace NilPortugues\Uuid;
 interface UuidInterface
 {
     /**
-     * @param  null  $namespace
-     * @param  null  $name
-     * @return mixed
+     * @param  null   $namespace
+     * @param  null   $name
+     * @return string
      */
     public static function create($namespace = null, $name = null);
 }
