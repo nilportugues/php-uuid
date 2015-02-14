@@ -1,5 +1,5 @@
 {
-  "name":"nilportugues/uuid-generator",
+  "name":"nilportugues/uuid",
   "type":"library",
   "homepage":"http://nilportugues.com",
   "license":"MIT",
@@ -22,16 +22,6 @@
   "require-dev": {
     "phpunit/phpunit": "~4.2"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/nilportugues/math"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/nilportugues/uuid"
-    }
-  ],
   "config": {
     "bin-dir": "bin/",
     "preferred-install": "dist"
