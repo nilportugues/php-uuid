@@ -4,11 +4,13 @@
 #Uuid Generator
 This class' intent is to encapsulate Uuid's latest and more secure versions removing the need to explicitly hard-code a Uuid version everywhere.
 
-## Uuid versions
-Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest preferred versions are:
+## Installation
 
-- Uuid4 preferred over Uuid1.
-- Uuid5 preferred over Uuid3 and Uuid1
+The recommended way to install the SQL Schema Builder is through [Composer](http://getcomposer.org). Run the following command to install it:
+
+```sh
+php composer.phar require nilportugues/uuid
+```
 
 ## Usage
 
@@ -50,4 +52,9 @@ echo Uuid::create(Uuid::NAMESPACE_X500, '/c=us/o=Sun/ou=People/cn=Rosanna Lee');
 More on its usage can be found here: http://tools.ietf.org/html/rfc4122#appendix-C
 
 
+## Uuid versions
+Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest preferred versions are:
+
+- Uuid4 preferred over Uuid1.
+- Uuid5 preferred over Uuid3 and Uuid1
 
