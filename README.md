@@ -71,4 +71,4 @@ Nil Portugués Calderó
  - [http://nilportugues.com](http://nilportugues.com)
 
 ### 5. License [↑](#index_block)
-The Input Validator is licensed under the MIT license.
+The code base is licensed under the MIT license.
