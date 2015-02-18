@@ -4,7 +4,7 @@
 #Uuid Generator
 This class' intent is to encapsulate Uuid's latest and more secure versions removing the need to explicitly hard-code a Uuid version everywhere.
 
-## Installation
+### 1. Installation
 
 The recommended way to install the Uuid Generator is through [Composer](http://getcomposer.org). Run the following command to install it:
 
@@ -12,11 +12,11 @@ The recommended way to install the Uuid Generator is through [Composer](http://g
 php composer.phar require nilportugues/uuid
 ```
 
-## Usage
+### 2. Usage
 
 Usage is real simple, you can create your Uuid right away or under certain namespaces.
 
-### Without namespacing
+#### 2.1. Without namespacing
 This is the most common case. Usage is straight-forward:
 
 ```php
@@ -26,7 +26,7 @@ use NilPortugues\Uuid\Uuid;
 echo Uuid::create(); // "13dfa123-d7a6-4082-8b3f-513c28f5d691"
 ```
 
-### With namespacing
+#### 2.2. With namespacing
 First of all, the following namespaces exists:
 
 - DNS Namespace
@@ -52,9 +52,23 @@ echo Uuid::create(Uuid::NAMESPACE_X500, '/c=us/o=Sun/ou=People/cn=Rosanna Lee');
 More on its usage can be found here: http://tools.ietf.org/html/rfc4122#appendix-C
 
 
-## Uuid versions
+#### 2.3. Uuid versions
 Currently Uuid has 5 versions and while all of them are valid, usage of newest versions is always preferred. Lastest preferred versions are:
 
 - Uuid4 preferred over Uuid1.
 - Uuid5 preferred over Uuid3 and Uuid1
 
+### 3. Quality
+
+To run the PHPUnit tests at the command line, go to the tests directory and issue phpunit.
+
+This library attempts to comply with PSR-1, PSR-2, and PSR-4. If you notice compliance oversights, please send a patch via pull request.
+
+### 4. Author [↑](#index_block)
+Nil Portugués Calderó
+
+ - <contact@nilportugues.com>
+ - [http://nilportugues.com](http://nilportugues.com)
+
+### 5. License [↑](#index_block)
+The Input Validator is licensed under the MIT license.
