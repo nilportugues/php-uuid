@@ -7,13 +7,10 @@ php:
   - 5.5
   - 5.4
   - nightly
-  - hhvm
 
 matrix:
   allow_failures:
-    - php: 
-      - nightly
-      - hhvm
+    - php: nightly
   
 before_script:
   - alias composer="php -d zend.enable_gc=0 /usr/bin/composer"
