@@ -11,7 +11,9 @@ php:
 
 matrix:
   allow_failures:
-    - php: nightly, hhvm
+    - php: 
+      - nightly
+      - hhvm
   
 before_script:
   - alias composer="php -d zend.enable_gc=0 /usr/bin/composer"
