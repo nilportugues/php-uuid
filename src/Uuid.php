@@ -90,9 +90,9 @@ class Uuid implements UuidInterface
      */
     private static function generate($uuidKey, array $arguments)
     {
-        $classAndMethod = explode('::', self::$uuidMap[$uuidKey]);
+        $classAndMethod = \explode('::', self::$uuidMap[$uuidKey]);
 
-        return call_user_func_array($classAndMethod, $arguments);
+        return \call_user_func_array($classAndMethod, $arguments);
     }
 
     /**

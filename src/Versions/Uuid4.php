@@ -27,7 +27,7 @@ class Uuid4 extends AbstractUuid implements UuidInterface
     public static function create($namespace = null, $name = null)
     {
         $bytes = self::generateBytes(16);
-        $hex   = bin2hex($bytes);
+        $hex   = \bin2hex($bytes);
 
         return self::toString(self::uuidFromHashedName($hex, 4));
     }
@@ -43,7 +43,7 @@ class Uuid4 extends AbstractUuid implements UuidInterface
     {
         $bytes = '';
         for ($i = 1; $i <= $length; $i++) {
-            $bytes = chr(mt_rand(0, 255)) . $bytes;
+            $bytes = \chr(\mt_rand(0, 255)) . $bytes;
         }
 
         return $bytes;

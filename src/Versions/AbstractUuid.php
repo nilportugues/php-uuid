@@ -35,22 +35,22 @@ abstract class AbstractUuid
     protected static function uuidFromHashedName($hash, $version)
     {
         // Set the version number
-        $timeHi = hexdec(substr($hash, 12, 4)) & 0x0fff;
+        $timeHi = \hexdec(\substr($hash, 12, 4)) & 0x0fff;
         $timeHi &= ~(0xf000);
         $timeHi |= $version << 12;
 
         // Set the variant to RFC 4122
-        $clockSeqHi = hexdec(substr($hash, 16, 2)) & 0x3f;
+        $clockSeqHi = \hexdec(\substr($hash, 16, 2)) & 0x3f;
         $clockSeqHi &= ~(0xc0);
         $clockSeqHi |= 0x80;
 
         return [
-            self::TIME_LOW                  => substr($hash, 0, 8),
-            self::TIME_MID                  => substr($hash, 8, 4),
-            self::TIME_HI_AND_VERSION       => sprintf('%04x', $timeHi),
-            self::CLOCK_SEQ_HI_AND_RESERVED => sprintf('%02x', $clockSeqHi),
-            self::CLOCK_SEQ_LOW             => substr($hash, 18, 2),
-            self::NODE                      => substr($hash, 20, 12),
+            self::TIME_LOW                  => \substr($hash, 0, 8),
+            self::TIME_MID                  => \substr($hash, 8, 4),
+            self::TIME_HI_AND_VERSION       => \sprintf('%04x', $timeHi),
+            self::CLOCK_SEQ_HI_AND_RESERVED => \sprintf('%02x', $clockSeqHi),
+            self::CLOCK_SEQ_LOW             => \substr($hash, 18, 2),
+            self::NODE                      => \substr($hash, 20, 12),
         ];
     }
 
@@ -63,7 +63,7 @@ abstract class AbstractUuid
      */
     protected static function toString(array $fields)
     {
-        return vsprintf(
+        return \vsprintf(
             '%08s-%04s-%04s-%02s%02s-%012s',
             $fields
         );

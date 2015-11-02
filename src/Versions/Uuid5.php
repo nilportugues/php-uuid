@@ -50,7 +50,7 @@ class Uuid5 extends AbstractUuid implements UuidInterface
             $fields = self::fromString($namespace);
         }
 
-        $hash = sha1(self::getBytes($fields) . $name);
+        $hash = \sha1(self::getBytes($fields) . $name);
 
         return self::toString(self::uuidFromHashedName($hash, 5));
     }
@@ -68,24 +68,24 @@ class Uuid5 extends AbstractUuid implements UuidInterface
     {
         $components = self::calculateComponents($name);
 
-        $nameParsed = implode('-', $components);
+        $nameParsed = \implode('-', $components);
         if (!self::isValid($nameParsed)) {
             throw new \InvalidArgumentException('Invalid UUID string: ' . $name);
         }
 
         return [
-            self::TIME_LOW                  => sprintf('%08s', $components[0]),
-            self::TIME_MID                  => sprintf('%04s', $components[1]),
-            self::TIME_HI_AND_VERSION       => sprintf('%04s', $components[2]),
-            self::CLOCK_SEQ_HI_AND_RESERVED => sprintf('%02s', substr($components[3], 0, 2)),
-            self::CLOCK_SEQ_LOW             => sprintf('%02s', substr($components[3], 2)),
-            self::NODE                      => sprintf('%012s', $components[4]),
+            self::TIME_LOW                  => \sprintf('%08s', $components[0]),
+            self::TIME_MID                  => \sprintf('%04s', $components[1]),
+            self::TIME_HI_AND_VERSION       => \sprintf('%04s', $components[2]),
+            self::CLOCK_SEQ_HI_AND_RESERVED => \sprintf('%02s', \substr($components[3], 0, 2)),
+            self::CLOCK_SEQ_LOW             => \sprintf('%02s', \substr($components[3], 2)),
+            self::NODE                      => \sprintf('%012s', $components[4]),
         ];
     }
 
     /**
      * We have stripped out the dashes and are breaking up the string using
-     * substr(). In this way, we can accept a full hex value that doesn't
+     * \substr(). In this way, we can accept a full hex value that doesn't
      * contain dashes.
      * @param $name
      *
@@ -93,14 +93,14 @@ class Uuid5 extends AbstractUuid implements UuidInterface
      */
     private static function calculateComponents($name)
     {
-        $nameParsed = str_replace(['urn:', 'uuid:', '{', '}', '-'], '', $name);
+        $nameParsed = \str_replace(['urn:', 'uuid:', '{', '}', '-'], '', $name);
 
         $components = [
-            substr($nameParsed, 0, 8),
-            substr($nameParsed, 8, 4),
-            substr($nameParsed, 12, 4),
-            substr($nameParsed, 16, 4),
-            substr($nameParsed, 20),
+            \substr($nameParsed, 0, 8),
+            \substr($nameParsed, 8, 4),
+            \substr($nameParsed, 12, 4),
+            \substr($nameParsed, 16, 4),
+            \substr($nameParsed, 20),
         ];
         return $components;
     }
@@ -114,9 +114,9 @@ class Uuid5 extends AbstractUuid implements UuidInterface
      */
     private static function isValid($uuid)
     {
-        $uuid = str_replace(['urn:', 'uuid:', '{', '}'], '', $uuid);
+        $uuid = \str_replace(['urn:', 'uuid:', '{', '}'], '', $uuid);
 
-        if (0 == preg_match('/' . self::VALID_PATTERN . '/', $uuid)) {
+        if (0 == \preg_match('/' . self::VALID_PATTERN . '/', $uuid)) {
             return false;
         }
 
@@ -134,8 +134,8 @@ class Uuid5 extends AbstractUuid implements UuidInterface
     private static function getBytes(array $fields)
     {
         $bytes = '';
-        foreach (range(-2, -32, 2) as $step) {
-            $bytes = chr(hexdec(substr(self::getHex($fields), $step, 2))) . $bytes;
+        foreach (\range(-2, -32, 2) as $step) {
+            $bytes = \chr(\hexdec(\substr(self::getHex($fields), $step, 2))) . $bytes;
         }
 
         return $bytes;
@@ -150,6 +150,6 @@ class Uuid5 extends AbstractUuid implements UuidInterface
      */
     private static function getHex(array $fields)
     {
-        return str_replace('-', '', static::toString($fields));
+        return \str_replace('-', '', static::toString($fields));
     }
 }
