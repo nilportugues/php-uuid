@@ -13,7 +13,7 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
+        "php": ">=5.5",
         "nilportugues/php_backslasher": "^0.2.1"
     },
     "require-dev": {
