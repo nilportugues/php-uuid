@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/nilportugues/php-uuid.svg)](https://travis-ci.org/nilportugues/php-uuid) [![Coverage Status](https://img.shields.io/coveralls/nilportugues/uuid.svg)](https://coveralls.io/r/nilportugues/uuid) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/nilportugues/uuid/badges/quality-score.png)](https://scrutinizer-ci.com/g/nilportugues/uuid/) [![Latest Stable Version](https://poser.pugx.org/nilportugues/uuid/v/stable)](https://packagist.org/packages/nilportugues/uuid) [![Total Downloads](https://poser.pugx.org/nilportugues/uuid/downloads)](https://packagist.org/packages/nilportugues/uuid) [![License](https://poser.pugx.org/nilportugues/uuid/license)](https://packagist.org/packages/nilportugues/uuid) [![SensioLabsInsight](https://insight.sensiolabs.com/projects/ee408e0a-5d08-42ce-9f42-b7a5220b1048/mini.png)](https://insight.sensiolabs.com/projects/ee408e0a-5d08-42ce-9f42-b7a5220b1048)
 [![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://paypal.me/nilportugues)
 
-#Uuid Generator
+# Uuid Generator
 This class' intent is to encapsulate Uuid's latest and more secure versions removing the need to explicitly hard-code a Uuid version everywhere.
 
 ### 1. Installation
